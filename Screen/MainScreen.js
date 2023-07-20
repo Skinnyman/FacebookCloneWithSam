@@ -47,15 +47,15 @@ const styles = StyleSheet.create({
    
   },
   searchBg: {
-    backgroundColor:'lightgrey',
+    backgroundColor:'#e1e3e1',
     height: 35,
     width: 35,
     borderRadius: 50,
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 10,
-    bottom:95,
-    left:220,
+    bottom:97,
+    left:232,
     
 
   

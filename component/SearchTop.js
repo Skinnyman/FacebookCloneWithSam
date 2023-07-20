@@ -3,7 +3,7 @@ import React from 'react'
 
 const SearchTop = () => {
   return (
-    <View style={{}}>
+    <View>
         <View>
             <TextInput
              placeholder='Search'

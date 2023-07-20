@@ -7,19 +7,20 @@ const SearchMiddle = ({data}) => {
     <View>
         <View style={styles.Container}>
             <Image
-             source={require('../assets/img2.jpeg')}
+             source={data.postImg}
              style={styles.Pic}
             />
             <Text style={{left:26,top:12,fontSize:16}}>{data.name}</Text>
-            <View>
-            <Entypo
-                          name='dots-three-horizontal'
-                          size={25}
-                            style={{left:160,top:5}}
-                          />
-             </View>             
+           
         </View>
-     
+        <View style={{marginLeft:190,top:45}}>
+        <Entypo
+                    name='dots-three-horizontal'
+                    size={25}
+                    style={{left:160,top:5}}
+                          />
+        </View>
+        
     </View>
   )
 }
@@ -30,7 +31,9 @@ const styles = StyleSheet.create({
     Container:{
      top:85,
      left:15,
-     marginBottom:50
+     marginBottom:-9.5,
+     flexDirection:'row',
+     backgroundColor:'white'
     },
     Pic:{
         height:50,
