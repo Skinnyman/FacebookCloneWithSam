@@ -68,7 +68,7 @@ const Post = ({data}) => {
                 />
                 <Text style={{left:39,bottom:27}}>Like</Text>
         </TouchableOpacity> 
-        <TouchableOpacity style={{paddingLeft:40,right:35}}> 
+        <TouchableOpacity style={{paddingLeft:40,right:36}}> 
                 <Ionicons
                 name='chatbox-outline'
                 size={24}
