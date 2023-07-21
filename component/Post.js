@@ -6,6 +6,8 @@ import Heart from '../assets/heart.jpeg';
 const Post = ({data}) => {
   const [count, setCount] = useState(0);
   const onPress = () => setCount(prevCount => prevCount + 1);
+ 
+  
   return (
   
     <View style={{backgroundColor:'white',marginBottom:11}}>
@@ -54,11 +56,11 @@ const Post = ({data}) => {
        source={Heart}
        style={styles.heart}
        />
-       <Text style={{right:160,top:2}}> {count}</Text>
+       <Text style={{right:160,top:2}}>{count}</Text>
        <Text>{data.comments}</Text>
        </View>
        <View style={styles.Container4}>
-        <TouchableOpacity onPress={onPress}>
+        <TouchableOpacity onPress={onPress} accessibilityState={isfocused ? { selected: true} : {}}> 
        <AntDesign
                 name='like2'
                 size={24}

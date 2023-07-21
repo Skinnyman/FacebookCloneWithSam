@@ -8,7 +8,7 @@ const LoginScreen= ({navigation}) =>{
      const [password,setPassword] = useState('');
      
     return(
-          <View style={{marginTop:26}}>
+          <View style={{marginTop:24,backgroundColor:'#fff',paddingTop:39}}>
                <View style={styles.Container}>
                <Image
                  source={ require('../assets/logo.png')} 
@@ -33,13 +33,14 @@ const LoginScreen= ({navigation}) =>{
                     <TouchableOpacity onPress={() => navigation.navigate('Forget')}>
                         <Text style={styles.pass} >Forgot password?</Text>
                     </TouchableOpacity>
-                    
+                     <View style={{marginTop:90}}>
                     <TouchableOpacity style={styles.Account} onPress={() => navigation.navigate('Register')}>
                            
                         <Text style={styles.accountText}>Create a new account</Text>
                     </TouchableOpacity>
+                    </View>
                     <Image
-                    source={require('../assets/meta-logo.png')} style={{height:57,width:100,marginLeft:120}}
+                    source={require('../assets/meta-logo.png')} style={{height:57,width:100,marginLeft:120,marginTop:17}}
                     />
 
                </View>
@@ -75,13 +76,14 @@ const styles = StyleSheet.create({
     borderColor:'lightblue',
     alignItems:'center',
     marginRight:100,
-    marginLeft:130,
+    marginLeft:13,
     marginTop:15,
     backgroundColor:'blue',
     borderRadius:200,
     padding:10,
-    width:'20%',
-    height:50
+    width:'90%',
+    height:50,
+    paddingRight:27
 
   },
   Login:{

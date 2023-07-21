@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
       padding: 10,
     },
     searchBg: {
-      backgroundColor:'lightgrey',
+      backgroundColor:'#e1e3e1',
       height: 35,
       width: 35,
       borderRadius: 50,
