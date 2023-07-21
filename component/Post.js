@@ -60,7 +60,7 @@ const Post = ({data}) => {
        <Text>{data.comments}</Text>
        </View>
        <View style={styles.Container4}>
-        <TouchableOpacity onPress={onPress} accessibilityState={isfocused ? { selected: true} : {}}> 
+        <TouchableOpacity onPress={onPress} > 
        <AntDesign
                 name='like2'
                 size={24}

@@ -1,12 +1,15 @@
 import { View,Image,StyleSheet,TextInput,TouchableOpacity,Text,Button} from "react-native"
-
+import { Feather } from '@expo/vector-icons'; 
 import { useState } from "react"
 
 
 const LoginScreen= ({navigation}) =>{
      const [email,setEmail] = useState('');
      const [password,setPassword] = useState('');
-     
+     const [hide ,sethide] = useState(true)
+     const handleEye = () =>{
+       sethide(!hide)
+     };
     return(
           <View style={{marginTop:24,backgroundColor:'#fff',paddingTop:39}}>
                <View style={styles.Container}>
@@ -23,9 +26,17 @@ const LoginScreen= ({navigation}) =>{
                <TextInput
                   placeholder="Password"
                   value={password}
+                  secureTextEntry={hide}
                   onChangeText={value => setPassword(value)}
                   style={styles.inputBox2}
                />
+                 <TouchableOpacity onPress={handleEye}>
+                   <Feather name="eye-off"
+                   size={24} 
+                   color="black"
+                   style={{left:320,bottom:36}} 
+                   />
+                   </TouchableOpacity>
                     <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate('Main')} >
                         <Text style={styles.Login} >Login</Text>
                     </TouchableOpacity>
