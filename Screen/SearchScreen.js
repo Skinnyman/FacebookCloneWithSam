@@ -3,34 +3,38 @@ import React from 'react'
 import SearchTop from '../component/SearchTop'
 import SearchMiddle from '../component/SearchMiddle'
 import { SearchData } from '../Data/SearchData'
-import { AntDesign } from '@expo/vector-icons'; 
-import SearchDown from '../component/SearchDown'
-import Searchlower from '../component/Searchlower'
-
+import {Ionicons} from 'react-native-vector-icons'
+import FriendList from '../component/FriendList'
+import SearchBottom from '../component/SearchBottom'
 const SearchScreen = ({navigation}) => {
   return (
-    <ScrollView style={{paddingTop:15,backgroundColor:'#fff'}}>
-        
-         <TouchableOpacity onPress={() => navigation.navigate("Main")}>
-         <AntDesign name="back" size={27} color="black" />
-         </TouchableOpacity>
-        
+    <View style={{paddingTop:15,backgroundColor:'#fff',bottom:8}}>
+         <ScrollView>
+        <TouchableOpacity  onPress={() => navigation.navigate('Main')}>
+       <Ionicons 
+               name='arrow-back' 
+               size={29}
+              marginTop={23}
+               />
+         </TouchableOpacity>      
          <SearchTop/>
-         <FlatList
-         data={SearchData}
-         renderItem={({item}) =>(
-          <SearchMiddle data={item}/>
-         )}
-         />
+        
+         {
+          SearchData.map(item => (
+            <SearchMiddle data={item}/>
+          ))
+         }
+         
           <View style={styles.Container}>
             <Text style={{fontSize:18,fontWeight:'bold'}}>People you may know</Text>
         </View>
-         <SearchDown/>
-         <Searchlower/>
+         <FriendList/>
+         <SearchBottom/>
+         </ScrollView>
          
        
          
-    </ScrollView>
+    </View>
   )
 }
 

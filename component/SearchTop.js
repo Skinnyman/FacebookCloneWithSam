@@ -10,7 +10,7 @@ const SearchTop = () => {
              style={styles.Container}
             />
         </View>
-        <View style={{borderBottomWidth:1,top:30,borderBottomColor:'grey'}}>
+        <View style={{borderBottomWidth:1,borderBottomColor:'grey',bottom:50}}>
            <View style={{top:39,flexDirection:'row',justifyContent:'space-around'}}>
                <Text style={{right:47,fontSize:20,fontWeight:'bold'}}>Recent</Text>
                <TouchableOpacity>
@@ -26,8 +26,8 @@ export default SearchTop
 
 const styles = StyleSheet.create({
     Container:{
-        left:69,
-        top:49,
+        left:39,
+        top:-29.6,
         borderWidth:1,
         width:"80%",
         borderRadius:40,

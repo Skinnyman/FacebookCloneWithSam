@@ -4,7 +4,7 @@ import {FontAwesome5,Fontisto} from 'react-native-vector-icons'
 
 const ProfileTop = () => {
   return (
-    <View>
+    <View style={{marginBottom:89}}>
         <View>
                 <Text style={{fontSize:25,fontWeight:'500',top:16,left:15}}>Menu</Text>
                 <TouchableOpacity style={styles.button}>

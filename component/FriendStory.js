@@ -1,6 +1,6 @@
 import { View, Text ,Image,StyleSheet} from 'react-native'
 import React from 'react'
-import { OtherStories } from './OtherStories'
+import { OtherStories } from '../Data/OtherStories'
 
 
 const FriendStory = () => {

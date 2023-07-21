@@ -5,7 +5,7 @@ import {MaterialIcons} from 'react-native-vector-icons'
 
 const ProfileDown = () => {
   return (
-    <View>
+    <View style={{bottom:90}}>
         <View style={styles.Container}>
             <Text style={{left:12}}>Your shortcuts</Text>
              <Image

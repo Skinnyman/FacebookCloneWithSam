@@ -4,10 +4,10 @@ import  {useState}from 'react'
 import {MaterialIcons,MaterialCommunityIcons,FontAwesome5,Entypo} from 'react-native-vector-icons'
 
 const ProfileBottom = () => {
-    const [shouldShow,setshouldShow] =useState(true);
+    const [shouldShow,setshouldShow] =useState(false);
   return (
-    <View> 
-        <View style={{}}>
+    <View style={{bottom:100}}> 
+        <View style={{bottom:30}}>
         <View style={styles.Container}>
             <TouchableOpacity>
                     <Image
@@ -200,17 +200,19 @@ const ProfileBottom = () => {
                 </TouchableOpacity>
             </View>
             ) : null
-        }
-
+        }   
         </View>
         </View>
       
-
-        <TouchableOpacity style={styles.See} onPress={() => setshouldShow(!shouldShow)}>
+         <View style={{marginBottom:12}}>
+        
+          </View>
+    
+          <View style={styles.Container16}>
+          <TouchableOpacity style={styles.See} onPress={() => setshouldShow(!shouldShow)}>
             <Text style={{left:14,color:'white'}}>See Less / See More </Text>
           </TouchableOpacity>
-    
-        
+            </View>
           
     </View>
   )
@@ -395,6 +397,6 @@ const styles = StyleSheet.create({
         backgroundColor:'#689ff7',
         paddingLeft:63,
         marginBottom:200,
-        bottom:340   
+        bottom:120
     },
 })

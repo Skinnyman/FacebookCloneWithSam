@@ -51,7 +51,7 @@ const LoginScreen= ({navigation}) =>{
                     </TouchableOpacity>
                     </View>
                     <Image
-                    source={require('../assets/meta-logo.png')} style={{height:57,width:100,marginLeft:120,marginTop:17}}
+                    source={require('../assets/meta-logo.png')} style={{height:57,width:100,marginLeft:120,marginTop:7}}
                     />
 
                </View>

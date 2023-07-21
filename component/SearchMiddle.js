@@ -4,7 +4,7 @@ import {Entypo} from 'react-native-vector-icons'
 
 const SearchMiddle = ({data}) => {
   return (
-    <View>
+    <View style={{bottom:90}}>
         <View style={styles.Container}>
             <Image
              source={data.postImg}
