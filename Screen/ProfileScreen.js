@@ -3,7 +3,7 @@ import React from 'react'
 import ProfileTop from '../component/ProfileTop'
 import ProfileDown from '../component/ProfileDown'
 import ProfileBottom from '../component/ProfileBottom'
-import ProfileD from '../component/ProfileD'
+
 
 const ProfileScreen = ({navigation}) => {
   return (
@@ -25,7 +25,9 @@ export default ProfileScreen
 
 const styles = StyleSheet.create({
   Container:{
-    backgroundColor:'white'
+    backgroundColor:'white',
+    
+    
   },
   Container1:{
     bottom:40,

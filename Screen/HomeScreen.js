@@ -1,27 +1,28 @@
 import { FlatList, ScrollView,StyleSheet,View} from 'react-native'
 import React from 'react'
-import Subheader from '../component/Subheader'
 import Stories from '../component/Stories'
 import Post from '../component/Post'
 import { Postdata } from '../Data/Postdata'
+import { FriendData } from '../Data/FriendData'
 
 
 
 const HomeScreen = () => {
   return (
-    <View  style={styles.Container}>
-      <ScrollView>
+    <>
+    <ScrollView>
+      <View  style={styles.Container}>
       <Stories/>
-      <FlatList
-       data={Postdata}
-       renderItem={({item}) =>(
+       {
+        Postdata.map(item =>(
+         <View key={item.id}>
         <Post data={item}/>
-       )
-      }
-      />
-      
+        </View>
+        ))
+       }
+      </View>
       </ScrollView>
-    </View>
+    </>
   )
 }
 

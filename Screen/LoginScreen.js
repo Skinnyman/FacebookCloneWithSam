@@ -32,7 +32,7 @@ const LoginScreen= ({navigation}) =>{
                />
                  <TouchableOpacity onPress={handleEye}>
                    <Feather name="eye-off"
-                   size={24} 
+                   size={18} 
                    color="black"
                    style={{left:320,bottom:36}} 
                    />

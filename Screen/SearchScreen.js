@@ -21,7 +21,9 @@ const SearchScreen = ({navigation}) => {
         
          {
           SearchData.map(item => (
+            <View key={item.id}>
             <SearchMiddle data={item}/>
+            </View>
           ))
          }
          

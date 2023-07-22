@@ -15,7 +15,7 @@ import FriendStoryImg7 from '../assets/img8.jpeg';
 
 export const Postdata = [
   {
-    key: '1',
+    id: 1,
     name: 'Stephanie Adjie',
     postImg: Post1,
     profileImg: FriendStoryImg1,
@@ -25,7 +25,7 @@ export const Postdata = [
     reaction: 180,
   },
   {
-    key: '2',
+    id: 2,
     name: 'Jane Smith',
     postImg: Post2,
     profileImg: FriendStoryImg2,
@@ -35,7 +35,7 @@ export const Postdata = [
     reaction: 120,
   },
   {
-    key: '3',
+    id: 3,
     name: 'Mark Johnson',
     postImg: Post3,
     profileImg: FriendStoryImg3,
@@ -45,7 +45,7 @@ export const Postdata = [
     reaction: 50,
   },
   {
-    key: '4',
+    id: 4,
     name: 'Emily Wilson',
     postImg: Post4,
     profileImg: FriendStoryImg4,
@@ -55,7 +55,7 @@ export const Postdata = [
     reaction: 90,
   },
   {
-    key: '5',
+    id: 5,
     name: 'Michael Brown',
     postImg: Post5,
     profileImg: FriendStoryImg5,
@@ -65,7 +65,7 @@ export const Postdata = [
     reaction: 240,
   },
   {
-    key: '6',
+    id: 6,
     name: 'Emma Davis',
     postImg: Post6,
     profileImg: FriendStoryImg6,
@@ -75,7 +75,7 @@ export const Postdata = [
     reaction: 210,
   },
   {
-    key: '7',
+    id: 7,
     name: 'Daniel Taylor',
     postImg: Post7,
     profileImg: FriendStoryImg7,

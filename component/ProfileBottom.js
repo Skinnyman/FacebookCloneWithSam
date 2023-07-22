@@ -5,6 +5,7 @@ import {MaterialIcons,MaterialCommunityIcons,FontAwesome5,Entypo} from 'react-na
 
 const ProfileBottom = () => {
     const [shouldShow,setshouldShow] =useState(false);
+    const [name,Setname] = useState("See More")
   return (
     <View style={{bottom:100}}> 
         <View style={{bottom:30}}>
@@ -202,6 +203,7 @@ const ProfileBottom = () => {
             ) : null
         }   
         </View>
+        
         </View>
       
          <View style={{marginBottom:12}}>
@@ -397,6 +399,6 @@ const styles = StyleSheet.create({
         backgroundColor:'#689ff7',
         paddingLeft:63,
         marginBottom:200,
-        bottom:120
+        bottom:139
     },
 })

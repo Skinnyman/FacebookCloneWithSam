@@ -47,20 +47,14 @@ export default headerT
 
 const styles = StyleSheet.create({
   appBar:{
-      flexDirection:'row',
-      alignItems:"center",
-      justifyContent:'space-between',
-      margin:20,
-      marginTop:5,
-      backgroundColor:'white',
-      marginLeft:4,
-      width:390,
-      height:120,
-      borderWidth:1,
-      borderColor:'white',
-      bottom:12,
-      right:4,
-      padding:6,
+    backgroundColor:'white',
+    padding: -5.6,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    top:39,
+    paddingTop:3,
+    
+
       
   },
   rating:{
@@ -85,7 +79,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       marginLeft: 10,
       bottom:1,
-      top:12
+      
     },
     
  

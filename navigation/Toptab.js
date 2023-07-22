@@ -13,6 +13,7 @@
 
  function MyTabs() {
    return (
+    <>
    <Tab.Navigator
     screenOptions={() =>({
         tabBarShowLabel:false,
@@ -72,7 +73,7 @@
             /> )}}
         />
      </Tab.Navigator>
-     
+     </>
    );
  }
 
