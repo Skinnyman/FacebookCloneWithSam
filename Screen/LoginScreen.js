@@ -11,7 +11,7 @@ const LoginScreen= ({navigation}) =>{
        sethide(!hide)
      };
     return(
-          <View style={{marginTop:24,backgroundColor:'#fff',paddingTop:39}}>
+          <View style={{marginTop:24,backgroundColor:'#fff',paddingTop:48,bottom:22}}>
                <View style={styles.Container}>
                <Image
                  source={ require('../assets/logo.png')} 
@@ -61,7 +61,7 @@ const LoginScreen= ({navigation}) =>{
 
 const styles = StyleSheet.create({
   Container:{
-   marginTop:164,
+   marginTop:172,
    marginLeft:1,    
   },
   inputBox:{

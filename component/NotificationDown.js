@@ -6,7 +6,7 @@ import {MaterialIcons,Entypo} from 'react-native-vector-icons'
 const NotificationDown = ({data}) => {
   return (
     <View>
-          <View style={{backgroundColor:'#cdf6fa',top:37}}>
+          <View style={{backgroundColor:'#d0f2f5',top:37,marginBottom:-42.6}}>
              <Image
                source={data.postImg}
                style={styles.pic}
@@ -18,15 +18,14 @@ const NotificationDown = ({data}) => {
              style={styles.group}
              />
              <View style={styles.Step}>
-                <Text style={styles.letter}>Rose Mary ,Nack Nice and Mary Actress 
-                    posted in members of Stephen Adom Kyei Duah</Text>
+                <Text style={styles.letter}>{data.caption}</Text>
                <Entypo
                           name='dots-three-horizontal'
                           size={25}
                           style={{right:11,bottom:26}}
                           />
             </View>
-            <Text style={{bottom:50,left:99}}>{data.caption2}</Text>
+            <Text style={{bottom:50,left:97}}>{data.caption2}</Text>
           </View>
           <View>
             
@@ -61,11 +60,12 @@ const styles = StyleSheet.create({
      Step:{
         flexDirection:'row',
         justifyContent:'space-around',
-        bottom:34
+        bottom:34,
+        
      },
      letter:{
        paddingLeft:130,
-       right:26,
+       right:31,
        bottom:25
      }
 })

@@ -1,11 +1,14 @@
-import { View, StyleSheet,TouchableOpacity,Text} from 'react-native'
+import { View, StyleSheet,TouchableOpacity,Text, ScrollView} from 'react-native'
 import React from 'react'
 import ForgetHead from '../component/ForgetHead'
 import {Ionicons} from 'react-native-vector-icons'
 
+
+
 const ForgetScreen = ({navigation}) => {
   return (
     <View>
+    
         <View>    
         <TouchableOpacity  onPress={() => navigation.navigate('Login')}>
        <Ionicons 
@@ -16,6 +19,8 @@ const ForgetScreen = ({navigation}) => {
          </TouchableOpacity>      
         </View>
        <ForgetHead/>
+     
+    
     </View>
   )
 }

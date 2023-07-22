@@ -17,7 +17,7 @@ const NotificationTop = () => {
                 
         </View>
         <Text style={{top:17,left:11,fontWeight:'bold',fontSize:20}}>New</Text>
-          <View style={{backgroundColor:'#cdf6fa',top:29}}>
+          <View style={{backgroundColor:'#d0f2f5',top:29}}>
              <Image
                source={require('../assets/img4.jpeg')}
                style={styles.pic}

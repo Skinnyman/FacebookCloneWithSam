@@ -5,10 +5,10 @@ import {MaterialIcons,MaterialCommunityIcons,FontAwesome5,Entypo} from 'react-na
 
 const ProfileBottom = () => {
     const [shouldShow,setshouldShow] =useState(false);
-    const [name,Setname] = useState("See More")
+    
   return (
-    <View style={{bottom:100}}> 
-        <View style={{bottom:30}}>
+    <View style={{ backgroundColor:'white',marginBottom:50}}> 
+        <View style={{bottom:200}}>
         <View style={styles.Container}>
             <TouchableOpacity>
                     <Image
@@ -210,7 +210,7 @@ const ProfileBottom = () => {
         
           </View>
     
-          <View style={styles.Container16}>
+          <View>
           <TouchableOpacity style={styles.See} onPress={() => setshouldShow(!shouldShow)}>
             <Text style={{left:14,color:'white'}}>See Less / See More </Text>
           </TouchableOpacity>
@@ -399,6 +399,6 @@ const styles = StyleSheet.create({
         backgroundColor:'#689ff7',
         paddingLeft:63,
         marginBottom:200,
-        bottom:139
+        bottom:270
     },
 })

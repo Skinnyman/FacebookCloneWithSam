@@ -32,6 +32,7 @@ const ForgetHead = () => {
                 <Text>Send</Text>
             </TouchableOpacity>
         </View>
+        
         </View>
 
     </View>

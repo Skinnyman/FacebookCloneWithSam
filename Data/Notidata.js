@@ -15,31 +15,31 @@ export const Notidata=[
     {
         id:2,
         postImg: Post2,
-        caption:'Rose Mary ,Nack Nice and Mary Actress posted in members of Stephen Adom Kyei Duah',
+        caption:'Asante  ,Abena Jack and Mary  posted in members of Stephen Adom Kyei Duah',
         caption2:'Yesterday at 4:07pm'
     },
     {
         id:3,
         postImg: Post3,
-        caption:'Rose Mary ,Nack Nice and Mary Actress posted in members of Stephen Adom Kyei Duah',
+        caption:'Young thug ,Rich Kid and DripLord posted in members of NSMQ',
         caption2:'Yesterday at 3:07pm'
     },
     {
         id:4,
         postImg: Post4,
-        caption:'Rose Mary ,Nack Nice and Mary Actress posted in members of Stephen Adom Kyei Duah',
+        caption:'Harrymay ,Akua and Emma posted in members Gamers of the Year',
         caption2:'Yesterday at 2:07pm'
     },
     {
         id:5,
         postImg: Post5,
-        caption:'Rose Mary ,Nack Nice and Mary Actress posted in members of Stephen Adom Kyei Duah',
+        caption:'Yaa Asante,Akua and Mary Actress posted in members of Research ',
         caption2:'Yesterday at 1:30pm'
     },
     {
         id:6,
         postImg: Post6,
-        caption:'Rose Mary ,Nack Nice and Mary Actress posted in members of Stephen Adom Kyei Duah',
+        caption:'Rose Mary ,Nack Nice and Mary Actress posted in members of Social Club',
         caption2:'Yesterday at 12:30am'
     },
 ]

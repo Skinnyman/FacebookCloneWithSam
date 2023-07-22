@@ -3,7 +3,7 @@ import React from 'react'
 import Markettop from '../component/Markettop'
 import Marketdown from '../component/Marketdown'
 import Markettopheader from '../component/Markettopheader'
-import { Marketdata } from '../component/Marketdata'
+import { Marketdata } from '../Data/Marketdata'
 import MarketdownUp from '../component/MarketdownUp'
 
 const WatchScreen = () => {
@@ -16,9 +16,9 @@ const WatchScreen = () => {
           
           {
             Marketdata.map(item=>(
-              <>
+             <View key={item.id}>
                     <Marketdown data={item}/>
-              </>
+                    </View>
             )
 
             )

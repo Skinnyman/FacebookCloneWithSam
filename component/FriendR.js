@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native'
 
 const FriendR = ({data}) => {
   return (
-    <View style={styles.Go}>
+    <View style={{marginVertical:-36,top:15,marginBottom:-50}}>
         <View style={styles.sad}>
                 <Image
                 source={data.postImg}
@@ -22,15 +22,17 @@ const FriendR = ({data}) => {
                 <Text style={styles.mutual}>{data.caption}</Text>
                 <Text style={styles.y}>{data.date}</Text>
         </View>
-        <View style={styles.Op}>
+        <View style={styles.Confirm}>
                     <TouchableOpacity style={styles.Touch}>
                         <Text style={styles.De1}>Confirm</Text>
                     </TouchableOpacity>
                    
            </View>
-           <TouchableOpacity style={styles.Touch1}>
-                        <Text style={styles.De}>Delete</Text>
-                    </TouchableOpacity>
+           <View style={{bottom:19}}>
+                    <TouchableOpacity style={styles.Touch1}>
+                                    <Text style={styles.De}>Delete</Text>
+                                </TouchableOpacity>
+            </View> 
     </View>
   )
 }
@@ -59,6 +61,7 @@ const styles = StyleSheet.create({
     Bring:{
        marginTop:20,
        left:24,
+       fontWeight:'bold'
     },
     Pic3:{
       height:29,
@@ -74,9 +77,9 @@ const styles = StyleSheet.create({
     y:{
        marginTop:16,
     },
-    Op:{
+    Confirm:{
      alignItems:'center',
-     flex:1,
+     bottom:21
     },
     Touch:{
         borderWidth:1,

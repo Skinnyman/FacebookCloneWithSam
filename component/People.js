@@ -5,7 +5,7 @@ import { TouchableOpacity } from 'react-native'
 
 const People = ({data}) => {
   return (
-    <View style={styles.Go}>
+    <View style={{marginVertical:-36,top:43,marginBottom:-37}}>
         
         <View style={styles.sad}>
                 <Image
@@ -24,15 +24,17 @@ const People = ({data}) => {
                 <Text style={styles.mutual}>{data.caption}</Text>
                 <Text style={styles.y}>{data.date}</Text>
         </View>
-        <View style={styles.Op}>
+        <View style={styles.Confirm}>
                     <TouchableOpacity style={styles.Touch}>
                         <Text style={styles.De1}>Confirm</Text>
                     </TouchableOpacity>
                    
            </View>
-           <TouchableOpacity style={styles.Touch1}>
+           <View style={{bottom:2}}>
+                   <TouchableOpacity style={styles.Touch1}>
                         <Text style={styles.De}>Delete</Text>
                     </TouchableOpacity>
+            </View>        
     </View>
   )
 }
@@ -61,6 +63,8 @@ const styles = StyleSheet.create({
     Bring:{
        marginTop:20,
        left:24,
+       fontSize:16,
+       fontWeight:'bold'
     },
     Pic3:{
       height:29,
@@ -76,9 +80,10 @@ const styles = StyleSheet.create({
     y:{
        marginTop:16,
     },
-    Op:{
+    Confirm:{
      alignItems:'center',
-     flex:1,
+     bottom:16,
+     left:12
     },
     Touch:{
         borderWidth:1,
@@ -87,7 +92,8 @@ const styles = StyleSheet.create({
         right:34,
         borderRadius:10,
         backgroundColor:'blue',
-        height:48
+        height:39,
+        padding:7,
         
     },
     De:{
@@ -98,10 +104,12 @@ const styles = StyleSheet.create({
         borderWidth:1,
         padding:15,
         width:'29%',
-        left:220,
+        left:250,
         bottom:51,
         borderRadius:10,
-        backgroundColor:'lightgrey',      
+        backgroundColor:'lightgrey', 
+        height:39,
+        padding:7 ,
     },
     De1:{
         left:20,

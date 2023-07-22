@@ -5,7 +5,7 @@ import {FontAwesome5} from 'react-native-vector-icons'
 
 const SubFriend = () => {
   return (
-    <View >
+    <View style={{bottom:18}} >
         <View style={styles.Container}>
                   <Text style={styles.Nat}>Friends</Text>
                     <View style={styles.Search}>
@@ -30,12 +30,12 @@ const SubFriend = () => {
          <View style={styles.Brook}>
 
          </View>
-         <View style={styles.Pan1}>
-         <Text style={styles.Pan}>Friend Requests</Text>
-          <Text style={styles.Num}>3</Text>
-          <TouchableOpacity>
-                   <Text style={styles.See}>See All</Text>
-             </TouchableOpacity>
+         <View style={styles.Friend1}>
+              <Text style={styles.Friend2}>Friend Requests</Text>
+                <Text style={styles.Num}>3</Text>
+                <TouchableOpacity>
+                        <Text style={styles.See}>See All</Text>
+                  </TouchableOpacity>
          </View>
     </View>
   )
@@ -72,12 +72,14 @@ const styles = StyleSheet.create({
           marginTop:7,
           right:27,
           borderWidth:1,
-          width:120,
+          width:"110%",
           height:40,
           borderRadius:40,
           fontSize:17,
           padding:5,
-          backgroundColor:'lightgrey'
+          backgroundColor:'#e0e0de',
+          paddingLeft:11,
+          fontWeight:'400'
           
       },
       Ed:{
@@ -88,27 +90,33 @@ const styles = StyleSheet.create({
          right:50,
          marginTop:7,
          borderWidth:1,
-          width:120,
+          width:"110%",
           height:40,
           borderRadius:40,
           fontSize:17,
           padding:5,
-          backgroundColor:'lightgrey'
+          backgroundColor:'#e0e0de',
+          paddingLeft:25,
+          fontWeight:'400'
       },      
-      Pan1:{
-      flexDirection:'row'
+      Friend1:{
+      flexDirection:'row',
+      borderTopWidth:1,
+      marginTop:9
     },
-    Pan:{
+    Friend2:{
       fontSize:19,
       marginTop:8,
       left:23,
+      fontWeight:'bold',
+      marginTop:12
      },
      Num:{
       color:'red',
       fontSize:20,
-      left:25,
-      marginTop:7,
-      fontWeight:'bold'
+      left:28,
+      fontWeight:'bold',
+      top:12
      },
      See:{
       left:170,

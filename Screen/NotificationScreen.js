@@ -9,22 +9,14 @@ const NotificationScreen = () => {
     <View style={styles.container}>
       <ScrollView>
        <NotificationTop/>
-       <FlatList
-        data={Notidata}
-        renderItem={({item}) => (
-
-          <NotificationDown data={item}/>
-        )
-      }
-       />
-
-       {/* {
+        {
          Notidata.map(item=>(
-           <>
+            <View key={item.id}>
              <NotificationDown data={item}/>
-          </>
+             </View>
+        
         ))
-      } */}
+      } 
       </ScrollView>
       
     </View>

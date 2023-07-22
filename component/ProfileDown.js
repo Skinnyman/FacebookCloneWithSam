@@ -5,7 +5,7 @@ import {MaterialIcons} from 'react-native-vector-icons'
 
 const ProfileDown = () => {
   return (
-    <View style={{bottom:90}}>
+    <View style={{bottom:120}}>
         <View style={styles.Container}>
             <Text style={{left:12}}>Your shortcuts</Text>
              <Image
@@ -21,7 +21,7 @@ const ProfileDown = () => {
              <Text style={styles.Me}>Mellisah </Text>
              <Text style={styles.Me}>Manoius</Text>
         </View>
-        <View style={{bottom:58,left:12}}>
+        <View style={{bottom:92,left:12}}>
             <Text>All shortcuts</Text>
         </View>
     </View>
@@ -32,14 +32,15 @@ export default ProfileDown
 
 const styles = StyleSheet.create({
     Container:{
-        bottom:78
+        bottom:86
     },
     pic:{
         width:'16%',
         height:60,
         left:11,
         marginTop:16,
-        borderRadius:50
+        borderRadius:50,
+        bottom:15
      },
      group:{
         borderWidth:1,
@@ -50,12 +51,12 @@ const styles = StyleSheet.create({
         left:23,
         paddingLeft:3,
         position:'absolute',
-        top:71,
+        top:60,
         left:50,
         backgroundColor:'white',
      },
      Me:{
         left:15,
-        top:9,
+        bottom:13
      }
 })
