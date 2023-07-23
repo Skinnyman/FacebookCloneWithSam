@@ -1,20 +1,34 @@
-import { View, Text ,StyleSheet, ScrollView,TouchableOpacity} from 'react-native'
-import React from 'react'
+import { View, Text ,StyleSheet, ScrollView,TouchableOpacity, Modal} from 'react-native'
+import React, { useState } from 'react'
 import WatchHeader from '../component/WatchHeader'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import ForY from '../component/ForY'
+import Live from '../component/Live'
 
 
-
-const WatchScreen = ({navigation}) => {
+const WatchScreen = () => {
+     const [visible,setvisible] = useState(true);
   return (
+   
     <View style={styles.Container}>
+       <Modal transparent visible={visible}>
+          <SafeAreaView style={{flex:1,backgroundColor:'red'}}
+          onTouchStart={() => setvisible(false)}
+          >
+               <View>
+                    <Live/>
+               </View>
+          </SafeAreaView>
+          
+       </Modal>
        <WatchHeader/>
        <View style={styles.Container1}>
             <ScrollView horizontal>
 
-              <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('For')}>
+              <TouchableOpacity style={styles.button} >
                    <Text>For you</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('live')}>
+              <TouchableOpacity style={styles.button} onPress={() => setvisible(true)}>
                    <Text>Live</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.button}>
@@ -31,7 +45,7 @@ const WatchScreen = ({navigation}) => {
               </TouchableOpacity>   
             </ScrollView>
         </View>
-       
+        <ForY/>
     </View>
   )
 }

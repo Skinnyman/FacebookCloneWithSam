@@ -11,7 +11,7 @@ const headerT = () => {
   return (
     <View style={styles.appBar}>
      <Modal transparent visible={visible}>
-         <SafeAreaView style={{flex:1,backgroundColor:'white'}}
+         <SafeAreaView style={{flex:1}} 
          onTouchStart={() => setvisible(false)}
          >
             <View>
@@ -66,7 +66,7 @@ const headerT = () => {
                     />
         </TouchableOpacity>   
         </View>  
-        <View style={styles.searchBg}>      
+        <View style={styles.searchBg1}>      
         <TouchableOpacity style={styles.button}>         
                     <Fontisto
                     name="messenger"
@@ -117,18 +117,28 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       marginLeft: 10,
-      bottom:1,
-      
+      bottom:1,  
+      right:27
+    },
+    searchBg1:{
+      backgroundColor:'#e1e3e1',
+      height: 35,
+      width: 35,
+      borderRadius: 50,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginLeft: 10,
+      bottom:1,  
     },
     Container:{
-      bottom:320,
-      left:60,
+      left:240,
       borderWidth:1,
       padding:7,
-      width:'29%',
+      width:'37%',
       paddingLeft:12,
       borderRadius:20,
-      backgroundColor:'red'
+      backgroundColor:'white',
+      top:70
   }
     
  
