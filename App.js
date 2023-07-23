@@ -8,6 +8,8 @@ import ForYouScreen from './Screen/ForYouScreen';
 import LiveScreen from './Screen/LiveScreen';
 import ForgetScreen from './Screen/ForgetScreen';
 import SearchScreen from './Screen/SearchScreen';
+import ReelScreen from './Screen/ReelScreen';
+import WatchScreen from './Screen/WatchScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,10 +21,10 @@ const MyStack = () => {
         <Stack.Screen name="Login" component={LoginScreen}/>
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="Main" component={MainScreen} />
-        <Stack.Screen name="For" component={ForYouScreen} />
-        <Stack.Screen name="live" component={LiveScreen} />
+        <Stack.Screen name="Reel" component={ReelScreen} />
         <Stack.Screen name="Forget" component={ForgetScreen} />
         <Stack.Screen name="Search" component={SearchScreen} />
+
       </Stack.Navigator>
     </NavigationContainer>
     

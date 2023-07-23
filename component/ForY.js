@@ -1,16 +1,26 @@
-import { StyleSheet, Text, TouchableOpacity, View ,Image} from 'react-native'
-import React from 'react'
-import { FontAwesome ,Entypo,Ionicons} from '@expo/vector-icons';
+import { StyleSheet, Text, TouchableOpacity, View ,Image, ScrollView} from 'react-native'
+import React, { useState } from 'react'
+import { FontAwesome ,Entypo,Ionicons,AntDesign} from '@expo/vector-icons';
+import { Video } from 'expo-av';
+import Like from '../assets/like.jpeg';
+import Heart from '../assets/heart.jpeg';
 
-const ForY = () => {
+
+
+const ForY = ({data}) => {
+  const [count, setCount] = useState(0);
+  const onPress = () => setCount(prevCount => prevCount + 1);
+  const video = React.useRef(null);
+  const [status,setStatus] = useState();  
   return (
     <View style={styles.Container}>
+        
         <View style={styles.header}>
              <Image
               source={require('../assets/img1.jpeg')}
               style={styles.Pic}
              />
-             <Text style={{top:17,left:17}}>Agwa Eni .</Text>
+             <Text style={{top:17,left:17}}>{data.name}</Text>
              <TouchableOpacity>
                  <Text style={{top:17,left:18,color:'#102aad'}}>Follow</Text>
              </TouchableOpacity>
@@ -34,7 +44,65 @@ const ForY = () => {
                           style={styles.icon1}
                           />            
         </View>
-               
+        <View>
+             <Text style={{left:66,bottom:12}}>{data.caption}</Text>
+        </View>
+       
+     
+
+       <View>
+         <Video
+        ref={video}
+        style={styles.video}
+        source={data.video}
+        useNativeControls
+        resizeMode="cover"
+        isLooping
+        onPlaybackStatusUpdate={setStatus}
+      />
+      <View>
+      <View style={styles.Container3}>
+       <Image
+       source={Like}
+       style={styles.Like}
+       />
+        <Image
+       source={Heart}
+       style={styles.heart}
+       />
+       <Text style={{right:127,top:2}}>{count}</Text>
+       <Text>78 Comments</Text>
+       </View>
+       <View style={styles.Container4}>
+        <TouchableOpacity onPress={onPress} > 
+       <AntDesign
+                name='like2'
+                size={24}
+                style={{bottom:4,left:9}}
+                />
+              <Text style={{left:39,bottom:27}}>Like</Text>
+        </TouchableOpacity> 
+        <TouchableOpacity style={{paddingLeft:40,right:36}}> 
+                <Ionicons
+                name='chatbox-outline'
+                size={24}
+                style={{bottom:4}}
+                />
+                <Text style={{bottom:28,left:34}}>Comment</Text>
+                </TouchableOpacity> 
+                <TouchableOpacity>
+                <Ionicons
+                name='arrow-redo-outline'
+                size={24}
+                style={{bottom:5,right:49}}
+                />
+                <Text style={{right:20,bottom:29}}>Share</Text>
+                </TouchableOpacity>
+       </View>
+      </View>
+    </View>
+         
+           
     </View>
   )
 }
@@ -44,7 +112,8 @@ export default ForY
 const styles = StyleSheet.create({
     Container:{
         borderTopWidth:1,
-        top:23,
+        top:20,
+        backgroundColor:'#fff'
       
     },
     Pic:{
@@ -68,5 +137,44 @@ const styles = StyleSheet.create({
     icon1:{
       left:42,
       bottom:35
-    }
+    },
+    video: {
+      width:'100%',
+      height:300,
+      left:2,
+      bottom:30
+    },
+    Container4: {
+      borderTopWidth:1,
+      marginTop:19,
+      borderColor:'grey',
+      flexDirection:'row',
+      justifyContent:'space-between',
+      padding:10,
+      top:12,
+      marginHorizontal:12,
+    },
+    video: {
+      width:'100%',
+      height:300,
+      left:2,
+      bottom:1
+    },
+    Like:{
+      width:23,
+      height:23,
+      borderRadius:50,
+      right:19
+    },
+    Container3:{
+      flexDirection:'row',
+      top:9,
+      justifyContent:'space-around',
+    },
+    heart:{
+      width:23,
+      height:23,
+      borderRadius:50,
+      right:78
+    },
 })

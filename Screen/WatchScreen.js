@@ -4,37 +4,53 @@ import WatchHeader from '../component/WatchHeader'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import ForY from '../component/ForY'
 import Live from '../component/Live'
+import Game from '../component/Game'
+import { WatchData } from '../Data/WatchData'
 
 
-const WatchScreen = () => {
-     const [visible,setvisible] = useState(true);
+const WatchScreen = ({navigation}) => {
+     const [visible,setvisible] = useState(false);
+     const [see,setsee] = useState(false)
   return (
    
     <View style={styles.Container}>
        <Modal transparent visible={visible}>
-          <SafeAreaView style={{flex:1,backgroundColor:'red'}}
+          <SafeAreaView style={{flex:1,}}
           onTouchStart={() => setvisible(false)}
           >
                <View>
                     <Live/>
+                    
                </View>
           </SafeAreaView>
           
        </Modal>
+       <Modal transparent visible={see}>
+          <SafeAreaView style={{flex:1}}
+          onTouchStart={() => setsee(false)}
+          >
+               <View>
+                    <Game/>
+
+               </View>
+          </SafeAreaView>
+          
+       </Modal>
+       <ScrollView>
        <WatchHeader/>
        <View style={styles.Container1}>
             <ScrollView horizontal>
 
-              <TouchableOpacity style={styles.button} >
+              <TouchableOpacity style={styles.button}>
                    <Text>For you</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.button} onPress={() => setvisible(true)}>
                    <Text>Live</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.button}>
+              <TouchableOpacity style={styles.button} onPress={() => setsee(true)}>
                    <Text>Gaming</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.button}>
+              <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Reel')}>
                    <Text>Reels</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.button}>
@@ -45,7 +61,16 @@ const WatchScreen = () => {
               </TouchableOpacity>   
             </ScrollView>
         </View>
-        <ForY/>
+       
+        {
+          WatchData.map(item =>(
+               <View key={item.id}>
+                     <ForY data={item}/>
+               </View>
+
+          ))
+        }
+        </ScrollView>
     </View>
   )
 }
