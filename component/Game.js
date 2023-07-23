@@ -2,12 +2,12 @@ import { StyleSheet, Text, View,Image,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { FontAwesome ,Entypo,Ionicons} from '@expo/vector-icons';
 
-const Live = () => {
+const Game = () => {
   return (
     <View style={styles.Container}>
     <View style={styles.header}>
          <Image
-          source={require('../assets/img2.jpeg')}
+          source={require('../assets/img3.jpeg')}
           style={styles.Pic}
          />
          <Text style={{top:17,left:17}}>Agwa Eni .</Text>
@@ -39,7 +39,7 @@ const Live = () => {
   )
 }
 
-export default Live
+export default Game
 
 const styles = StyleSheet.create({
   Container:{

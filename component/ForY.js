@@ -1,10 +1,15 @@
-import { StyleSheet, Text, TouchableOpacity, View ,Image} from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View ,Image, ScrollView} from 'react-native'
 import React from 'react'
 import { FontAwesome ,Entypo,Ionicons} from '@expo/vector-icons';
+import VideoPlayer from 'react-native-video-player';
+
+import { ViewPropTypes } from 'deprecated-react-native-prop-types';
+
 
 const ForY = () => {
   return (
     <View style={styles.Container}>
+        <ScrollView>
         <View style={styles.header}>
              <Image
               source={require('../assets/img1.jpeg')}
@@ -34,7 +39,11 @@ const ForY = () => {
                           style={styles.icon1}
                           />            
         </View>
-               
+        <View>
+             <Text style={{left:29}}>Let's Cook</Text>
+        </View>
+        
+        </ScrollView>    
     </View>
   )
 }
@@ -44,7 +53,8 @@ export default ForY
 const styles = StyleSheet.create({
     Container:{
         borderTopWidth:1,
-        top:23,
+        top:20,
+        backgroundColor:'#fff'
       
     },
     Pic:{
