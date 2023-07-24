@@ -5,7 +5,7 @@
  import MarketPlaceScreen from '../Screen/MarketPlaceScreen'
  import NotificationScreen from '../Screen/NotificationScreen'
  import ProfileScreen from '..//Screen/ProfileScreen'
- import {Entypo,Ionicons,MaterialCommunityIcons} from 'react-native-vector-icons'
+ import {Ionicons,MaterialCommunityIcons} from 'react-native-vector-icons'
  
  
  const Tab = createMaterialTopTabNavigator();

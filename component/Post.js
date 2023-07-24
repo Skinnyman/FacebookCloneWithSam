@@ -6,6 +6,14 @@ import Heart from '../assets/heart.jpeg';
 const Post = ({data}) => {
   const [count, setCount] = useState(0);
   const onPress = () => setCount(prevCount => prevCount + 1);
+
+  const [isTouched, setIsTouched] = useState(false);
+
+  const handlePress = () => {
+    setIsTouched(!isTouched);
+  };
+
+  const textColor = isTouched ? 'blue' : 'black';
  
   
   return (
@@ -66,7 +74,7 @@ const Post = ({data}) => {
                 size={24}
                 style={{bottom:4,left:7}}
                 />
-                <Text style={{left:39,bottom:27}}>Like</Text>
+                <Text style={[styles.touchLike,{ color: textColor }]}>Like</Text>
         </TouchableOpacity> 
         <TouchableOpacity style={{paddingLeft:40,right:36}}> 
                 <Ionicons
@@ -142,7 +150,10 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     padding:10,
     top:12,
-    marginHorizontal:12,
-   
+    marginHorizontal:12, 
+  },
+  touchLike:{
+    left:39,
+    bottom:27
   }
 })

@@ -6,27 +6,27 @@ import Post5 from '../assets/post5.jpeg';
 export const SearchData=[
     
         {
-            key: '1',
+            id: '1',
             name: 'John Doe',
             postImg: Post1,       
           },
           {
-            key: '2',
+            id: '2',
             name: 'Jane Smith',
             postImg: Post2,
           },
           {
-            key: '3',
+            id: '3',
             name: 'Mark Johnson',
             postImg: Post3,
           },
           {
-            key: '4',
+            id: '4',
             name: 'Emily Wilson',
             postImg: Post4,
           },
           {
-            key: '5',
+            id: '5',
             name: 'Michael Brown',
             postImg: Post5,
           },

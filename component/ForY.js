@@ -59,6 +59,7 @@ const ForY = ({data}) => {
         resizeMode="cover"
         isLooping
         onPlaybackStatusUpdate={setStatus}
+        
       />
       <View>
       <View style={styles.Container3}>

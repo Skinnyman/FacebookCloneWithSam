@@ -14,7 +14,7 @@ const WatchScreen = ({navigation}) => {
   return (
    
     <View style={styles.Container}>
-       <Modal transparent visible={visible}>
+       {/* <Modal transparent visible={visible}>
           <SafeAreaView style={{flex:1,}}
           onTouchStart={() => setvisible(false)}
           >
@@ -35,7 +35,7 @@ const WatchScreen = ({navigation}) => {
                </View>
           </SafeAreaView>
           
-       </Modal>
+       </Modal> */}
        <ScrollView>
        <WatchHeader/>
        <View style={styles.Container1}>
