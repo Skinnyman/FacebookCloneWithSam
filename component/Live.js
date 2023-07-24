@@ -10,7 +10,7 @@ const Live = () => {
           source={require('../assets/img2.jpeg')}
           style={styles.Pic}
          />
-         <Text style={{top:17,left:17}}>Agwa Eni .</Text>
+         <Text style={{top:17,left:17}}>Jane Smith .</Text>
          <TouchableOpacity>
              <Text style={{top:17,left:18,color:'#102aad'}}>Follow</Text>
          </TouchableOpacity>
@@ -44,7 +44,7 @@ export default Live
 const styles = StyleSheet.create({
   Container:{
     borderTopWidth:1,
-    top:243,
+    top:223,
   
 },
 Pic:{

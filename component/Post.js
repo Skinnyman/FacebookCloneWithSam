@@ -3,17 +3,17 @@ import React , {useState} from 'react'
 import {Entypo,Ionicons,FontAwesome5,AntDesign} from 'react-native-vector-icons'
 import Like from '../assets/like.jpeg';
 import Heart from '../assets/heart.jpeg';
+
 const Post = ({data}) => {
   const [count, setCount] = useState(0);
-  const onPress = () => setCount(prevCount => prevCount + 1);
-
-  const [isTouched, setIsTouched] = useState(false);
-
-  const handlePress = () => {
-    setIsTouched(!isTouched);
-  };
-
-  const textColor = isTouched ? 'blue' : 'black';
+  const [liked, setlike] = useState(false);
+  const handlelike = () => {
+    setlike(!liked)
+    setCount(prevCount => prevCount + 1);
+    
+  }
+ 
+  
  
   
   return (
@@ -68,14 +68,18 @@ const Post = ({data}) => {
        <Text>{data.comments}</Text>
        </View>
        <View style={styles.Container4}>
-        <TouchableOpacity onPress={onPress} > 
+        <TouchableOpacity onPress={handlelike}  > 
+       
        <AntDesign
-                name='like2'
+                name={liked ? 'like1' : 'like2'}
                 size={24}
+                color = {liked ? 'blue' : 'black'}
                 style={{bottom:4,left:7}}
                 />
-                <Text style={[styles.touchLike,{ color: textColor }]}>Like</Text>
+                <Text style={[styles.touchLike,[{color: liked ? 'blue' : 'black'}]]}>Like</Text>
+                   
         </TouchableOpacity> 
+
         <TouchableOpacity style={{paddingLeft:40,right:36}}> 
                 <Ionicons
                 name='chatbox-outline'
@@ -83,7 +87,7 @@ const Post = ({data}) => {
                 style={{bottom:4}}
                 />
                 <Text style={{bottom:28,left:34}}>Comment</Text>
-                </TouchableOpacity> 
+        </TouchableOpacity> 
                 <TouchableOpacity>
                 <Ionicons
                 name='arrow-redo-outline'
@@ -154,6 +158,7 @@ const styles = StyleSheet.create({
   },
   touchLike:{
     left:39,
-    bottom:27
+    bottom:27,
+    
   }
 })

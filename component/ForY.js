@@ -9,7 +9,11 @@ import Heart from '../assets/heart.jpeg';
 
 const ForY = ({data}) => {
   const [count, setCount] = useState(0);
-  const onPress = () => setCount(prevCount => prevCount + 1);
+  const [liked,setliked] = useState(false);
+  const handlelike = () => {
+    setliked(!liked)
+    setCount(prevCount => prevCount + 1);
+  }
   const video = React.useRef(null);
   const [status,setStatus] = useState();  
   return (
@@ -49,7 +53,7 @@ const ForY = ({data}) => {
         </View>
        
      
-
+        {/* Adding Videos to the watch Screen */}
        <View>
          <Video
         ref={video}
@@ -75,13 +79,15 @@ const ForY = ({data}) => {
        <Text>78 Comments</Text>
        </View>
        <View style={styles.Container4}>
-        <TouchableOpacity onPress={onPress} > 
-       <AntDesign
-                name='like2'
+        <TouchableOpacity onPress={handlelike} > 
+        <AntDesign
+                name={liked ? 'like1' : 'like2'}
                 size={24}
-                style={{bottom:4,left:9}}
+                color = {liked ? 'blue' : 'black'}
+                style={{bottom:4,left:7}}
                 />
-              <Text style={{left:39,bottom:27}}>Like</Text>
+                <Text style={[styles.touchLike,[{color: liked ? 'blue' : 'black'}]]}>Like</Text>
+                   
         </TouchableOpacity> 
         <TouchableOpacity style={{paddingLeft:40,right:36}}> 
                 <Ionicons
@@ -178,4 +184,9 @@ const styles = StyleSheet.create({
       borderRadius:50,
       right:78
     },
+    touchLike:{
+      left:39,
+      bottom:27,
+      
+    }
 })
